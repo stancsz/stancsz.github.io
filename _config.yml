@@ -1,0 +1,8 @@
+plugins:
+  - jekyll-remote-theme
+  - "disqus-for-jekyll"
+remote_theme: zivong/jekyll-theme-hydure
+title: Stan Chen
+tagline: It's all about creating values with data. 🚀🚀🚀
+author.name: Stan Chen
+author.url: https://github.com/stancsz
