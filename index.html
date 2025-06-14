@@ -114,12 +114,12 @@
     <div class="row">
       <div class="col-md-8 offset-md-2 text-center">
         <h2 class="text-center mb-4" data-i18n="licenseSectionTitle">开源许可</h2>
-        <p class="mt-4" data-i18n="sunoLicense">
-          仅限上传到 Suno 的曲目（请访问 https://suno.com/@stancsz）。作品版权开源(CC BY)，欢迎使用我的歌曲作为翻唱/采样来创作您自己的歌曲，只要您遵守 CC BY 许可。
+        <p class="mt-4">
+          仅限上传到 Suno 的曲目（请访问 <a href="https://suno.com/@stancsz" target="_blank">https://suno.com/@stancsz</a>）。作品版权开源(CC BY)，欢迎使用我的歌曲作为翻唱/采样来创作您自己的歌曲，只要您遵守 CC BY 许可。
         </p>
         <div class="mt-4">
-          <textarea class="form-control" rows="5" readonly data-i18n="mechanicalLicenseText" style="display: none;"></textarea>
-          <button class="btn btn-primary mt-2" data-i18n="downloadLicenseButton" onclick="window.open('https://stancsz.github.io', '_blank')" style="display: none;">下载机械许可</button>
+          <textarea class="form-control" rows="5" readonly style="display: none;">本机械许可（"许可"）由 stancsz/作曲填词小哥（"许可方"）授予，仅适用于在 https://stancsz.github.io 上发布的曲目。本许可允许被许可方（"您"）根据知识共享署名许可 (CC BY) 的条款，自由地使用、改编和分享这些曲目。这意味着您可以将我的作品用于翻唱、采样或任何其他创作目的，前提是您明确注明原作者。</textarea>
+          <button class="btn btn-primary mt-2" data-i18n="downloadLicenseButton" onclick="window.open('https://stancsz.github.io/license.txt', '_blank')" style="display: none;">下载机械许可</button>
         </div>
       </div>
     </div>
@@ -159,7 +159,7 @@
         mainTitle: '中文 Hip-hop & R&B 音乐创作',
         mainDescription: 'stancsz/作曲填词小哥 - 独立音乐人 Singer/Songwriter - Hip-hop - R&B',
         spotifyLink: '在 Spotify 收听',
-        contactEmail: '如果您有兴趣合作，或有制作方面的咨询，请发送电子邮件至 bytenrecords@gmail.com',
+        contactEmail: '如果您有兴趣合作，或有制作方面的咨询，请发送电子邮件至 <a href="mailto:bytenrecords@gmail.com">bytenrecords@gmail.com</a>',
         sunoLicense: '仅限上传到 Suno 的曲目（请访问 https://suno.com/@stancsz）。作品版权开源(CC BY)，欢迎使用我的歌曲作为翻唱/采样来创作您自己的歌曲，只要您遵守 CC BY 许可。',
         mechanicalLicenseText: '本机械许可仅授予您使用 stancsz/作曲填词小哥 在 Suno (https://suno.com/@stancsz) 上发布的歌曲作为翻唱或采样的权利，前提是您遵守知识共享署名许可 (CC BY)。这意味着您可以自由地分享和改编我的作品，只要您注明原作者。',
         downloadLicenseButton: '下载机械许可',
@@ -190,7 +190,7 @@
         mainTitle: '中文 Hip-hop & R&B 音樂創作',
         mainDescription: 'stancsz/作曲填詞小哥 - 獨立音樂人 Singer/Songwriter - Hip-hop - R&B',
         spotifyLink: '在 Spotify 收聽',
-        contactEmail: '如果您有興趣合作，或有製作方面的諮詢，請發送電子郵件至 bytenrecords@gmail.com',
+        contactEmail: '如果您有興趣合作，或有製作方面的諮詢，請發送電子郵件至 <a href="mailto:bytenrecords@gmail.com">bytenrecords@gmail.com</a>',
         sunoLicense: '僅限上傳到 Suno 的曲目（請訪問 https://suno.com/@stancsz）。作品版權開源(CC BY)，歡迎使用我的歌曲作為翻唱/採樣來創作您自己的歌曲，只要您遵守 CC BY 許可。',
         mechanicalLicenseText: '本機械許可僅授予您使用 stancsz/作曲填詞小哥 在 Suno (https://suno.com/@stancsz) 上發布的歌曲作為翻唱或採樣的權利，前提是您遵守知識共享署名許可 (CC BY)。這意味著您可以自由地分享和改編我的作品，只要您註明原作者。',
         downloadLicenseButton: '下載機械許可',
@@ -219,13 +219,16 @@
 
     function applyLanguage(lang) {
       document.documentElement.lang = lang;
+
+      // Handle elements with data-i18n attribute
       const elements = document.querySelectorAll('[data-i18n]');
       elements.forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
-          element.textContent = translations[lang][key];
+          element.innerHTML = translations[lang][key];
         }
       });
+
       // Special handling for title tag
       const titleElement = document.querySelector('title');
       if (titleElement && translations[lang] && translations[lang]['pageTitle']) {
