@@ -116,6 +116,23 @@
     </div>
   </div>
 
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8 offset-md-2 text-center">
+        <h2 class="text-center mb-4" data-i18n="generateLicenseTitle">生成您的许可</h2>
+        <div class="mb-3">
+          <label for="licenseeName" class="form-label" data-i18n="licenseeNameLabel">您的用户名:</label>
+          <input type="text" class="form-control" id="licenseeName" placeholder="请输入您的用户名">
+        </div>
+        <div class="mb-3">
+          <label for="songTitle" class="form-label" data-i18n="songTitleLabel">歌曲标题:</label>
+          <input type="text" class="form-control" id="songTitle" placeholder="请输入歌曲标题">
+        </div>
+        <button class="btn btn-success mt-2" data-i18n="generateAndDownloadButton" onclick="generateLicense()">生成并下载许可</button>
+      </div>
+    </div>
+  </div>
+
   <!-- 頁腳 -->
   <footer class="bg-light py-3 mt-5">
     <div class="container text-center">
@@ -152,6 +169,10 @@
         playlist3Alt: '男声报到',
         playlist4Alt: 'Fresh Finds Taiwan',
         licenseSectionTitle: '开源许可',
+        generateLicenseTitle: '生成您的许可',
+        licenseeNameLabel: '您的用户名:',
+        songTitleLabel: '歌曲标题:',
+        generateAndDownloadButton: '生成并下载许可',
         footerText: '&copy; 2025 stancsz/作曲填词小哥. 版权所有.'
       },
       'zh-TW': {
@@ -179,6 +200,10 @@
         playlist3Alt: '男聲報到',
         playlist4Alt: 'Fresh Finds Taiwan',
         licenseSectionTitle: '開源許可',
+        generateLicenseTitle: '生成您的許可',
+        licenseeNameLabel: '您的用戶名:',
+        songTitleLabel: '歌曲標題:',
+        generateAndDownloadButton: '生成並下載許可',
         footerText: '&copy; 2025 stancsz/作曲填詞小哥. 版權所有.'
       }
     };
@@ -235,6 +260,50 @@
         applyLanguage('zh-CN');
       }
     });
+
+    function generateLicense() {
+      const licenseeName = document.getElementById('licenseeName').value;
+      const songTitle = document.getElementById('songTitle').value;
+      const currentDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+      const licenseContent = `Date: ${currentDate}
+
+Who is giving permission? (Licensor):
+stancsz/作曲填词小哥
+
+Who is getting permission? (Licensee):
+${licenseeName || '[Please enter your name here]'}
+
+What song is this for? (Composition):
+"${songTitle || '[Enter Song Title Here]'}"
+
+What you can do:
+You have my permission to record, reproduce, and share your own audio-only version of the song (e.g., on streaming platforms, social media, digital downloads) completely for free.
+
+Cost:
+$0. This is a royalty-free license. No payment is required, ever.
+
+That's it! Looking forward to hearing what you create.
+
+Agreed and Accepted by:
+
+Licensor:
+
+stancsz/作曲填词小哥
+
+Licensee:
+
+${licenseeName || '[Licensee\'s Name]'}
+`;
+
+      const blob = new Blob([licenseContent], { type: 'text/plain;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'license.txt';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   </script>
 </body>
 </html>
