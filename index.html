@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>作曲填詞小哥 - 中文 Hip-hop & R&B 音樂創作</title>
+  <title>作曲填词小哥 - 中文 Hip-hop & R&B 音乐创作</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -18,14 +18,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              語言
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#" data-lang="zh-CN">简体中文</a></li>
-              <li><a class="dropdown-item" href="#" data-lang="zh-TW">繁體中文</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-lang="zh-CN">简体中文</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-lang="zh-TW">繁體中文</a>
           </li>
         </ul>
       </div>
@@ -38,16 +35,14 @@
       <div class="col-md-8 offset-md-2 text-center">
         <h1>中文 Hip-hop & R&B 音樂創作</h1>
         <p class="lead">
-          我專注於中文 Hip-hop 與 R&B 的音樂製作，為你量身打造獨一無二的音樂體驗。除了原創音樂創作，我還提供編曲、混音、錄音等全方位服務。
+          我不再接單了，而是與其他藝術家合作，共同成長。如果您有興趣合作，或有製作方面的諮詢，請發送電子郵件至 bytenrecords@gmail.com
         </p>
         <p class="mt-4">
           <a href="https://open.spotify.com/artist/3Yd1ranaGvAK5wtC7muHIV" target="_blank">在 Spotify 收聽</a>
         </p>
-        <!-- 二維碼圖片 -->
-        <div class="mt-4">
-          <img src="qr.png" alt="微信群二維碼" class="img-fluid" style="max-width:200px;">
-          <p class="mt-2">掃碼進群了解更多服務詳情</p>
-        </div>
+        <p class="mt-4">
+          如果您有興趣合作，或有製作方面的諮詢，請發送電子郵件至 <a href="mailto:bytenrecords@gmail.com">bytenrecords@gmail.com</a>
+        </p>
       </div>
     </div>
 
@@ -57,7 +52,7 @@
         <div class="row">
           <div class="col-md-6 mb-4">
             <div class="card">
-              <img src="playlists_logo/ab67706f00000002a1556cd414d5c56976c45bc0.jpg" class="card-img-top" alt="嘻哈華語精選">
+              <img src="playlists_logo/ab67706f00000002fff53f9628744a905c36bc2d.jpg" class="card-img-top" alt="嘻哈華語精選">
               <div class="card-body">
                 <h5 class="card-title">嘻哈華語精選</h5>
                 <p class="card-text">歌曲: 十字路口</p>
@@ -67,7 +62,7 @@
           </div>
           <div class="col-md-6 mb-4">
             <div class="card">
-              <img src="playlists_logo/ab67706f00000002d7f326ab389a7b9f72d2c34f.jpg" class="card-img-top" alt="獨立最前線">
+              <img src="playlists_logo/ab67706f0000000270d27d24efa70e18591ab234.jpg" class="card-img-top" alt="獨立最前線">
               <div class="card-body">
                 <h5 class="card-title">獨立最前線</h5>
                 <p class="card-text">歌曲: 十字路口</p>
@@ -77,7 +72,7 @@
           </div>
           <div class="col-md-6 mb-4">
             <div class="card">
-              <img src="playlists_logo/ab67706f00000002fff53f9628744a905c36bc2d.jpg" class="card-img-top" alt="男聲報到">
+              <img src="playlists_logo/ab67706f00000002a1556cd414d5c56976c45bc0.jpg" class="card-img-top" alt="男聲報到">
               <div class="card-body">
                 <h5 class="card-title">男聲報到</h5>
                 <p class="card-text">歌曲: 十字路口</p>
@@ -87,7 +82,7 @@
           </div>
           <div class="col-md-6 mb-4">
             <div class="card">
-              <img src="playlists_logo/ab67706f0000000270d27d24efa70e18591ab234.jpg" class="card-img-top" alt="Fresh Finds Taiwan">
+              <img src="playlists_logo/ab67706f00000002d7f326ab389a7b9f72d2c34f.jpg" class="card-img-top" alt="Fresh Finds Taiwan">
               <div class="card-body">
                 <h5 class="card-title">Fresh Finds Taiwan</h5>
                 <p class="card-text">歌曲: 十字路口</p>
@@ -108,5 +103,66 @@
   </footer>
   
   <!-- Bootstrap JS -->
-  <script src="https
-</replace_in_file>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- OpenCC for Traditional/Simplified Chinese Conversion -->
+  <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/opencc-full.min.js"></script>
+  <script>
+    let converter;
+    const currentLangKey = 'selectedLang';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize OpenCC converter
+      converter = await OpenCC.Converter({ from: 'cn', to: 'tw' }); // Default to cn to tw for initial load
+
+      const langLinks = document.querySelectorAll('.navbar-nav .nav-link');
+      langLinks.forEach(link => {
+        link.addEventListener('click', async (event) => {
+          event.preventDefault();
+          const lang = event.target.getAttribute('data-lang');
+          if (lang) {
+            localStorage.setItem(currentLangKey, lang);
+            await applyLanguage(lang);
+          }
+        });
+      });
+
+      const savedLang = localStorage.getItem(currentLangKey);
+      if (savedLang) {
+        await applyLanguage(savedLang);
+      } else {
+        // Default to zh-CN if no language is saved
+        localStorage.setItem(currentLangKey, 'zh-CN');
+        await applyLanguage('zh-CN');
+      }
+    });
+
+    async function applyLanguage(lang) {
+      document.documentElement.lang = lang;
+      if (lang === 'zh-CN') {
+        converter = await OpenCC.Converter({ from: 'tw', to: 'cn' });
+      } else {
+        converter = await OpenCC.Converter({ from: 'cn', to: 'tw' });
+      }
+
+      const allTextNodes = [];
+      const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+      let node;
+      while ((node = walk.nextNode())) {
+        if (node.parentNode.tagName !== 'SCRIPT' && node.parentNode.tagName !== 'STYLE') {
+          allTextNodes.push(node);
+        }
+      }
+
+      for (const node of allTextNodes) {
+        node.textContent = await converter(node.textContent);
+      }
+
+      // Special handling for title tag
+      const titleElement = document.querySelector('title');
+      if (titleElement) {
+        titleElement.textContent = await converter(titleElement.textContent);
+      }
+    }
+  </script>
+</body>
+</html>
