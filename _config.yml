@@ -1,0 +1,5 @@
+title: My Minimal Blog
+description: A minimal blog powered by Jekyll and GitHub Pages
+theme: minimal
+plugins:
+  - jekyll-seo-tag
