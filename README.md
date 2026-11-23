@@ -1,15 +1,29 @@
 # stancsz.github.io
 
-A small portfolio and project notebook for Stan Chen. The site is plain HTML and CSS: no framework, build step, JavaScript, or external font service.
+**English** · [简体中文](#简体中文)
 
-## Edit the site
+## English
 
-- Update `index.html` to change the introduction, selected projects, or links.
-- Update `styles.css` to adjust the layout and visual style.
-- `favicon.svg` is the small monogram used in the browser tab.
+A lean portfolio and project notebook for Stan Chen. The site uses plain HTML and CSS, with a small built-in script for the English / 简体中文 switch. It has no framework, build step, dependencies, or external font service.
 
-Project descriptions are intentionally brief and link to each repository for implementation details, evaluation notes, and current limitations. Use GitHub Discussions for questions and conversation about the work.
+Project descriptions link to their repositories for implementation details, evaluation notes, and known limits. Use [GitHub Discussions](https://github.com/stancsz/stancsz.github.io/discussions) to ask questions or discuss the work.
 
-## Publish with GitHub Pages
+### Edit and publish
 
-The intended Pages source is the `main` branch, repository root. There is no build command or dependency installation. After Pages is enabled, changes pushed to `main` are served at <https://stancsz.github.io/>.
+- Update `index.html` for copy, selected projects, and links.
+- Update `styles.css` for layout and visual style.
+- `assets/stan-cat-avatar.png` is the circular portrait used in the header and browser tab.
+- Push to `main`; GitHub Pages serves the repository root at <https://stancsz.github.io/>.
+
+## 简体中文
+
+Stan Chen 的精简作品集与项目笔记。网站使用原生 HTML 和 CSS，并通过一小段内置脚本提供英文 / 简体中文切换；没有框架、构建步骤、依赖或外部字体服务。
+
+项目简介链接到各自的代码仓库，方便查看实现细节、评测记录和已知限制。欢迎在 [GitHub Discussions](https://github.com/stancsz/stancsz.github.io/discussions) 提问或交流。
+
+### 编辑与发布
+
+- 修改 `index.html` 中的介绍、精选项目和链接。
+- 修改 `styles.css` 调整布局与视觉样式。
+- `assets/stan-cat-avatar.png` 是页眉和浏览器标签使用的圆形头像。
+- 推送到 `main` 后，由 GitHub Pages 从仓库根目录发布到 <https://stancsz.github.io/>。
