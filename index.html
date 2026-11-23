@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fbfaf7">
-    <meta name="description" content="Stan Chen is a software engineer building practical AI systems and developer tools. Explore projects, evaluations, and notes.">
+    <meta name="description" content="Stan Chen is a software engineer working on AI infrastructure and developer tools. Projects, notes, and evaluations.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Stan Chen — AI systems & developer tools">
-    <meta property="og:description" content="Projects, evaluations, and notes from Stan Chen, a software engineer working on practical AI tools.">
+    <meta property="og:description" content="Projects and notes on AI infrastructure, developer tools, and coding agents.">
     <meta property="og:locale" content="en_US">
     <link rel="canonical" href="https://stancsz.github.io/">
     <link rel="alternate" hreflang="en" href="https://stancsz.github.io/">
@@ -42,8 +42,8 @@
     <main id="main">
       <section class="intro shell" aria-labelledby="intro-title">
         <p class="eyebrow"><span data-i18n="role">Software engineer</span> <span aria-hidden="true">/</span> <span data-i18n="specialty">AI &amp; developer tools</span></p>
-        <h1 id="intro-title" class="intro-lead" data-i18n="introLead">I build practical tools for AI-assisted work.</h1>
-        <p class="intro-copy" data-i18n="introCopy">My projects explore developer workflows, local inference, and agent systems. I share the code, results, and limitations so the work is easy to inspect and discuss.</p>
+        <h1 id="intro-title" class="intro-lead" data-i18n="introLead">I build tools for coding agents.</h1>
+        <p class="intro-copy" data-i18n="introCopy">Recent projects include a second opinion for coding agents, a way to find context in long histories, and a local memory graph. Source code and evaluation notes are linked below.</p>
         <div class="intro-links">
           <a class="button" href="#work"><span data-i18n="selectedWork">Selected work</span> <span aria-hidden="true">↓</span></a>
           <a class="plain-link" href="https://github.com/stancsz/stancsz.github.io/discussions"><span data-i18n="discussProject">Discuss a project</span> <span aria-hidden="true">↗</span></a>
@@ -53,7 +53,6 @@
       <section class="section shell" id="work" aria-labelledby="work-title">
         <div class="section-heading">
           <h2 id="work-title" data-i18n="selectedWork">Selected work</h2>
-          <p data-i18n="selectedWorkDescription">Three projects with research, evaluations, or implementation notes to explore.</p>
         </div>
 
         <div class="featured-list">
@@ -61,7 +60,7 @@
             <div class="entry-type" data-i18n="codingAgents">Coding agents</div>
             <div class="entry-main">
               <h3>Spot Advisor</h3>
-              <p data-i18n="spotDescription">When a coding agent reaches a decision that could change its next move, Spot prepares one concise, evidence-backed question for a frontier model and returns a next step with a local check.</p>
+              <p data-i18n="spotDescription">When a coding agent faces a consequential decision, Spot sends one evidence-backed question to a frontier model, then returns a next step you can check locally.</p>
               <div class="entry-links">
                 <a href="https://github.com/spot-advisor/spot-advisor"><span data-i18n="source">Source</span> <span aria-hidden="true">↗</span></a>
               </div>
@@ -72,7 +71,7 @@
             <div class="entry-type" data-i18n="contextTools">Context tools · Preview</div>
             <div class="entry-main">
               <h3>Sift</h3>
-              <p data-i18n="siftDescription">Preserves the active task and selects relevant evidence from long coding-agent histories without asking a model to summarize them.</p>
+              <p data-i18n="siftDescription">Keeps the current task intact while finding relevant context in long coding-agent histories, without first asking a model to summarize the history.</p>
               <div class="evidence-note">
                 <strong data-i18n="siftMetric">59.66% fewer prompt tokens</strong>
                 <span data-i18n="siftEvidence">in one 344-question LongBench v2 cohort; task-majority score was 5.25 points lower than full context.</span>
@@ -87,7 +86,7 @@
             <div class="entry-type" data-i18n="agentMemory">Agent memory</div>
             <div class="entry-main">
               <h3>Second Brain</h3>
-              <p data-i18n="secondBrainDescription">A local-first knowledge graph for AI agents, with Markdown as its canonical store.</p>
+              <p data-i18n="secondBrainDescription">A local-first knowledge graph for agent memory, with Markdown files as the source of truth.</p>
               <div class="entry-links">
                 <a href="https://github.com/stancsz/second-brain"><span data-i18n="source">Source</span> <span aria-hidden="true">↗</span></a>
               </div>
@@ -140,7 +139,7 @@
           <h2 id="about-title" data-i18n="aboutTitle">About</h2>
         </div>
         <div class="about-copy">
-          <p data-i18n="aboutCopy">I work across AI infrastructure, developer tools, and product experiments. I value simple systems, measured claims, and clear accounts of what remains uncertain.</p>
+          <p data-i18n="aboutCopy">I work on AI infrastructure, developer tools, and product experiments.</p>
           <div class="entry-links">
             <a href="https://github.com/stancsz"><span data-i18n="githubProfile">GitHub profile</span> <span aria-hidden="true">↗</span></a>
             <a href="https://github.com/stancsz/stancsz.github.io/discussions"><span data-i18n="startDiscussion">Start a discussion</span> <span aria-hidden="true">↗</span></a>
@@ -158,9 +157,9 @@
       (() => {
         const zh = {
           title: "Stan Chen — AI 系统与开发者工具",
-          description: "Stan Chen 是一名软件工程师，专注于构建实用的 AI 系统与开发者工具。这里展示项目、评测与笔记。",
+          description: "Stan Chen 是一名软件工程师，主要做 AI 基础设施和开发者工具。这里记录项目、笔记与评测。",
           ogTitle: "Stan Chen — AI 系统与开发者工具",
-          ogDescription: "Stan Chen 关于实用 AI 工具的项目、评测与笔记。",
+          ogDescription: "AI 基础设施、开发者工具与编程智能体项目的记录。",
           skip: "跳到正文",
           mainNavigation: "主导航",
           language: "语言",
@@ -170,20 +169,19 @@
           navAbout: "关于",
           role: "软件工程师",
           specialty: "AI 与开发者工具",
-          introLead: "我为 AI 辅助工作构建实用工具。",
-          introCopy: "我的项目探索开发者工作流、本地推理和智能体系统。我会公开代码、结果与局限，方便查看和交流。",
+          introLead: "我做编程智能体相关工具。",
+          introCopy: "最近的项目包括：给编程智能体提供第二意见、从长记录里找回上下文，以及本地记忆图谱。源码和评测记录都在下面。",
           selectedWork: "精选项目",
           discussProject: "讨论项目",
-          selectedWorkDescription: "三个包含研究、评测或实现笔记的项目。",
           codingAgents: "编程智能体",
-          spotDescription: "当编程智能体遇到可能改变后续方向的关键决策时，Spot 会向前沿模型提出一个有证据支撑的简明问题，并给出可在本地核验的下一步建议。",
+          spotDescription: "编程智能体面临关键选择时，Spot 会根据现有证据向前沿模型提一个问题，再给出可在本地核验的下一步。",
           source: "源码",
           contextTools: "上下文工具 · 预览版",
-          siftDescription: "在不让模型总结历史的前提下，保留当前任务，并从漫长的编程智能体记录中筛选相关证据。",
+          siftDescription: "Sift 保留当前任务，并从编程智能体的长历史记录中找出相关上下文；它不会先让模型总结整段记录。",
           siftMetric: "提示词 token 减少 59.66%",
           siftEvidence: "在包含 344 道题的 LongBench v2 评测组中；按任务多数票计算的得分比完整上下文低 5.25 分。",
           agentMemory: "智能体记忆",
-          secondBrainDescription: "面向 AI 智能体的本地优先知识图谱，以 Markdown 文件作为规范存储。",
+          secondBrainDescription: "面向智能体记忆的本地优先知识图谱，数据保存在 Markdown 文件中。",
           moreProjects: "更多项目",
           sourceRepositories: "源码仓库",
           localInferenceDescription: "一套经过测试的 Windows 工作流，可在配备 16 GB 显存的 RTX 5070 Ti 上运行量化 27B 模型，并附有测量记录与已知限制。",
@@ -196,7 +194,7 @@
           longbenchCohort: "LongBench v2 评测组",
           verificationLimits: "验证与已知限制",
           aboutTitle: "关于",
-          aboutCopy: "我专注于 AI 基础设施、开发者工具与产品实践。我重视简单的系统、可量化的结论，以及对不确定性的清楚说明。",
+          aboutCopy: "我做 AI 基础设施和开发者工具，也会尝试做产品。",
           githubProfile: "GitHub 主页",
           startDiscussion: "发起讨论",
           footerTagline: "项目、笔记与证据。",
