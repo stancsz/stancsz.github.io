@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#fbfaf7">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f0">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141a16">
     <meta name="description" content="Stan Chen is a software engineer working on AI infrastructure and developer tools. Projects, notes, and evaluations.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Stan Chen — AI systems & developer tools">
@@ -13,145 +14,134 @@
     <link rel="alternate" hreflang="en" href="https://stancsz.github.io/">
     <link rel="alternate" hreflang="zh-Hans" href="https://stancsz.github.io/?lang=zh">
     <link rel="alternate" hreflang="x-default" href="https://stancsz.github.io/">
-    <link rel="icon" href="/assets/stan-cat-avatar.png" type="image/png">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/assets/stan-cat-favicon.png" type="image/png" sizes="64x64">
+    <link rel="stylesheet" href="/styles.css?v=20261124">
     <title>Stan Chen — AI systems &amp; developer tools</title>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
-    <header class="site-header shell">
-      <a class="brand" href="/" aria-label="Stan Chen, home" data-i18n-aria-label="home">
-        <img class="brand-avatar" src="/assets/stan-cat-avatar.png" alt="" width="42" height="42">
-        <span>Stan Chen<span class="brand-period">.</span></span>
-      </a>
-      <nav class="site-nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
-        <a href="#work" data-i18n="navWork">Work</a>
-        <a href="#notes" data-i18n="navNotes">Notes</a>
-        <a href="#about" data-i18n="navAbout">About</a>
-      </nav>
-      <div class="header-actions">
-        <a class="header-link" href="https://github.com/stancsz">GitHub <span aria-hidden="true">↗</span></a>
-        <nav class="language-toggle" aria-label="Language" data-i18n-aria-label="language">
-          <a href="/?lang=en" lang="en" data-lang-link="en" aria-current="page">EN</a>
-          <a href="/?lang=zh" lang="zh-Hans" data-lang-link="zh">中文</a>
+    <header class="site-header" id="top">
+      <div class="header-inner shell">
+        <a class="brand" href="#top" aria-label="Stan Chen, home" data-i18n-aria-label="home">Stan Chen</a>
+        <nav class="site-nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
+          <a href="#work" data-i18n="navWork">Work</a>
+          <a href="#notes" data-i18n="navNotes">Notes</a>
+          <a href="#about" data-i18n="navAbout">About</a>
         </nav>
+        <div class="header-actions">
+          <a class="header-link" href="https://github.com/stancsz">GitHub <span class="link-arrow" aria-hidden="true">↗</span></a>
+          <nav class="language-toggle" aria-label="Language" data-i18n-aria-label="language">
+            <a href="/?lang=en" lang="en" data-lang-link="en" aria-current="page">EN</a>
+            <a href="/?lang=zh" lang="zh-Hans" data-lang-link="zh">中文</a>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main id="main">
+    <main id="main" tabindex="-1">
       <section class="intro shell" aria-labelledby="intro-title">
-        <p class="eyebrow"><span data-i18n="role">Software engineer</span> <span aria-hidden="true">/</span> <span data-i18n="specialty">AI &amp; developer tools</span></p>
-        <h1 id="intro-title" class="intro-lead" data-i18n="introLead">I build tools for coding agents.</h1>
-        <p class="intro-copy" data-i18n="introCopy">Recent projects include a second opinion for coding agents, a way to find context in long histories, and a local memory graph. Source code and evaluation notes are linked below.</p>
-        <div class="intro-links">
-          <a class="button" href="#work"><span data-i18n="selectedWork">Selected work</span> <span aria-hidden="true">↓</span></a>
-          <a class="plain-link" href="https://github.com/stancsz/stancsz.github.io/discussions"><span data-i18n="discussProject">Discuss a project</span> <span aria-hidden="true">↗</span></a>
+        <div class="intro-heading">
+          <p class="eyebrow"><span data-i18n="role">Software engineer</span> <span class="eyebrow-divider" aria-hidden="true">·</span> <span data-i18n="specialty">AI &amp; developer tools</span></p>
+          <h1 id="intro-title"><span data-i18n="introLead">I build tools for</span> <span data-i18n="introLeadEnd">coding agents.</span></h1>
+        </div>
+        <div class="portrait-frame">
+          <img class="hero-portrait" src="/assets/stan-cat-portrait.jpg" alt="Stan Chen holding a cat" data-i18n-alt="portraitAlt" width="512" height="512" fetchpriority="high">
+        </div>
+        <div class="intro-details">
+          <p class="intro-copy" data-i18n="introCopy">Recent projects include a second opinion for coding agents, a way to find context in long histories, and a local memory graph.</p>
+          <div class="intro-links">
+            <a class="button" href="#work"><span data-i18n="selectedWork">Selected work</span> <span class="link-arrow" aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="https://github.com/stancsz/stancsz.github.io/discussions"><span data-i18n="discussProject">Discuss a project</span> <span class="link-arrow" aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </section>
 
-      <section class="section shell" id="work" aria-labelledby="work-title">
-        <div class="section-heading">
-          <h2 id="work-title" data-i18n="selectedWork">Selected work</h2>
-        </div>
+      <section class="work-section shell" id="work" aria-labelledby="work-title">
+        <h2 id="work-title" data-i18n="selectedWork">Selected work</h2>
 
         <div class="featured-list">
           <article class="work-entry">
-            <div class="entry-type" data-i18n="codingAgents">Coding agents</div>
-            <div class="entry-main">
-              <h3>Spot Advisor</h3>
-              <p data-i18n="spotDescription">When a coding agent faces a consequential decision, Spot sends one evidence-backed question to a frontier model, then returns a next step you can check locally.</p>
-              <div class="entry-links">
-                <a href="https://github.com/spot-advisor/spot-advisor"><span data-i18n="source">Source</span> <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
+            <p class="entry-type" data-i18n="codingAgents">Coding agents</p>
+            <h3>Spot Advisor</h3>
+            <p class="entry-description" data-i18n="spotDescription">When a coding agent faces a consequential decision, Spot sends one evidence-backed question to a frontier model, then returns a next step you can check locally.</p>
+            <a class="text-link card-source" href="https://github.com/spot-advisor/spot-advisor"><span data-i18n="source">Source</span><span class="sr-only"> — Spot Advisor</span> <span class="link-arrow" aria-hidden="true">↗</span></a>
           </article>
 
           <article class="work-entry">
-            <div class="entry-type" data-i18n="contextTools">Context tools · Preview</div>
-            <div class="entry-main">
-              <h3>Sift</h3>
-              <p data-i18n="siftDescription">Keeps the current task intact while finding relevant context in long coding-agent histories, without first asking a model to summarize the history.</p>
-              <div class="evidence-note">
-                <strong data-i18n="siftMetric">59.66% fewer provider-reported prompt tokens than full context</strong>
-                <span data-i18n="siftEvidence">in one public, previously exposed 344-question LongBench v2 cohort; task-majority accuracy was 5.25 percentage points below full context.</span>
-              </div>
-              <div class="entry-links">
-                <a href="https://github.com/stancsz/sift"><span data-i18n="source">Source</span> <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
+            <p class="entry-type" data-i18n="contextTools">Context tools · Preview</p>
+            <h3>Sift</h3>
+            <p class="entry-description" data-i18n="siftDescription">Keeps the current task intact while finding relevant context in long coding-agent histories, without first asking a model to summarize the history.</p>
+            <a class="text-link card-source" href="https://github.com/stancsz/sift"><span data-i18n="source">Source</span><span class="sr-only"> — Sift</span> <span class="link-arrow" aria-hidden="true">↗</span></a>
           </article>
 
           <article class="work-entry">
-            <div class="entry-type" data-i18n="agentMemory">Agent memory</div>
-            <div class="entry-main">
-              <h3>Second Brain</h3>
-              <p data-i18n="secondBrainDescription">A local-first knowledge graph for agent memory, with Markdown files as the source of truth.</p>
-              <div class="entry-links">
-                <a href="https://github.com/stancsz/second-brain"><span data-i18n="source">Source</span> <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
+            <p class="entry-type" data-i18n="agentMemory">Agent memory</p>
+            <h3>Second Brain</h3>
+            <p class="entry-description" data-i18n="secondBrainDescription">A local-first knowledge graph for agent memory, with Markdown files as the source of truth.</p>
+            <a class="text-link card-source" href="https://github.com/stancsz/second-brain"><span data-i18n="source">Source</span><span class="sr-only"> — Second Brain</span> <span class="link-arrow" aria-hidden="true">↗</span></a>
           </article>
         </div>
 
-        <div class="more-work">
-          <div class="subheading">
-            <h3 data-i18n="moreProjects">More projects</h3>
-            <span data-i18n="sourceRepositories">Source repositories</span>
+        <aside class="evidence-note" aria-labelledby="sift-benchmark">
+          <div class="evidence-stat">
+            <p class="entry-type" id="sift-benchmark" data-i18n="siftBenchmark">Sift benchmark</p>
+            <strong class="evidence-value">59.66%</strong>
           </div>
+          <div class="evidence-details">
+            <p class="evidence-metric" data-i18n="siftMetric">Fewer provider-reported prompt tokens than full context</p>
+            <p data-i18n="siftEvidence">In one public, previously exposed 344-question LongBench v2 cohort, task-majority accuracy was 5.25 percentage points below full context.</p>
+          </div>
+        </aside>
+
+        <div class="more-work">
+          <h3 data-i18n="moreProjects">More projects</h3>
           <div class="project-grid">
             <article class="small-project">
-              <h4><a href="https://github.com/stancsz/subroute">Subroute <span aria-hidden="true">↗</span></a></h4>
+              <h4><a href="https://github.com/stancsz/subroute">Subroute <span class="link-arrow" aria-hidden="true">↗</span></a></h4>
               <p data-i18n="subrouteDescription">A local endpoint for coding clients, subscription adapters, and API model routes.</p>
             </article>
             <article class="small-project">
-              <h4><a href="https://github.com/stancsz/local-inference">Local Inference <span aria-hidden="true">↗</span></a></h4>
+              <h4><a href="https://github.com/stancsz/local-inference">Local Inference <span class="link-arrow" aria-hidden="true">↗</span></a></h4>
               <p data-i18n="localInferenceDescription">A tested Windows workflow for running a quantized 27B model on a 16 GB RTX 5070 Ti, with measurements, receipts, and limits documented alongside it.</p>
             </article>
             <article class="small-project">
-              <h4><a href="https://github.com/stancsz/shunt">Shunt <span aria-hidden="true">↗</span></a></h4>
+              <h4><a href="https://github.com/stancsz/shunt">Shunt <span class="link-arrow" aria-hidden="true">↗</span></a></h4>
               <p data-i18n="shuntDescription">A research prototype for coding-task tier recommendations; its review does not establish production readiness.</p>
             </article>
             <article class="small-project">
-              <h4><a href="https://github.com/stancsz/soak">Soak <span aria-hidden="true">↗</span></a></h4>
+              <h4><a href="https://github.com/stancsz/soak">Soak <span class="link-arrow" aria-hidden="true">↗</span></a></h4>
               <p data-i18n="soakDescription">A dependency-free framework for repeated, bounded trials of agent workflows.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section notes-section" id="notes" aria-labelledby="notes-title">
-        <div class="shell">
-          <div class="section-heading">
-            <h2 id="notes-title" data-i18n="notesTitle">Notes &amp; evidence</h2>
-            <p data-i18n="notesDescription">Primary material behind the project summaries.</p>
-          </div>
+      <div class="details-grid shell">
+        <section class="details-card" id="notes" aria-labelledby="notes-title">
+          <h2 id="notes-title" data-i18n="notesTitle">Notes &amp; evidence</h2>
+          <p data-i18n="notesDescription">Primary material behind the project summaries.</p>
           <ul class="resource-list">
-            <li><span>Spot Advisor</span><a href="https://github.com/spot-advisor/spot-advisor#research-and-paper"><span data-i18n="researchReplication">Research &amp; replication</span> <span aria-hidden="true">↗</span></a></li>
-            <li><span>Sift</span><a href="https://github.com/stancsz/sift#broader-longbench-v2-cohort-344-questions-three-repeats-per-arm"><span data-i18n="longbenchCohort">LongBench v2 cohort</span> <span aria-hidden="true">↗</span></a></li>
-            <li><span>Local Inference</span><a href="https://github.com/stancsz/local-inference/blob/main/VERIFICATION.md"><span data-i18n="verificationLimits">Verification and known limits</span> <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/spot-advisor/spot-advisor#research-and-paper"><span class="resource-project">Spot Advisor</span><span data-i18n="researchReplication">Research &amp; replication</span> <span class="link-arrow" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/stancsz/sift#broader-longbench-v2-cohort-344-questions-three-repeats-per-arm"><span class="resource-project">Sift</span><span data-i18n="longbenchCohort">LongBench v2 cohort</span> <span class="link-arrow" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/stancsz/local-inference/blob/main/VERIFICATION.md"><span class="resource-project">Local Inference</span><span data-i18n="verificationLimits">Verification and known limits</span> <span class="link-arrow" aria-hidden="true">↗</span></a></li>
           </ul>
-        </div>
-      </section>
+        </section>
 
-      <section class="section shell about-section" id="about" aria-labelledby="about-title">
-        <div class="section-heading about-heading">
+        <section class="details-card" id="about" aria-labelledby="about-title">
           <h2 id="about-title" data-i18n="aboutTitle">About</h2>
-        </div>
-        <div class="about-copy">
-          <p data-i18n="aboutCopy">I work on AI infrastructure, developer tools, and product experiments.</p>
+          <p class="about-copy" data-i18n="aboutCopy">I work on AI infrastructure, developer tools, and product experiments.</p>
           <div class="entry-links">
-            <a href="https://github.com/stancsz"><span data-i18n="githubProfile">GitHub profile</span> <span aria-hidden="true">↗</span></a>
-            <a href="https://github.com/stancsz/stancsz.github.io/discussions"><span data-i18n="startDiscussion">Start a discussion</span> <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/stancsz"><span data-i18n="githubProfile">GitHub profile</span> <span class="link-arrow" aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/stancsz/stancsz.github.io/discussions"><span data-i18n="startDiscussion">Start a discussion</span> <span class="link-arrow" aria-hidden="true">↗</span></a>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
     <footer class="site-footer shell">
       <span>Stan Chen</span>
-      <span data-i18n="footerTagline">Projects, notes, and evidence.</span>
-      <a href="#main"><span data-i18n="backToTop">Back to top</span> ↑</a>
+      <a class="text-link" href="#top"><span data-i18n="backToTop">Back to top</span> <span class="link-arrow" aria-hidden="true">↑</span></a>
     </footer>
     <script>
       (() => {
@@ -169,8 +159,10 @@
           navAbout: "关于",
           role: "软件工程师",
           specialty: "AI 与开发者工具",
-          introLead: "我做编程智能体相关工具。",
-          introCopy: "最近的项目包括：给编程智能体提供第二意见、从长记录里找回上下文，以及本地记忆图谱。源码和评测记录都在下面。",
+          introLead: "给编程智能体",
+          introLeadEnd: "做工具。",
+          introCopy: "最近做了几样工具：给编程智能体提供第二意见、从长记录里找回上下文，以及在本地维护记忆图谱。",
+          portraitAlt: "Stan Chen 抱着一只猫",
           selectedWork: "精选项目",
           discussProject: "讨论项目",
           codingAgents: "编程智能体",
@@ -178,12 +170,12 @@
           source: "源码",
           contextTools: "上下文工具 · 预览版",
           siftDescription: "Sift 保留当前任务，并从编程智能体的长历史记录中找出相关上下文；它不会先让模型总结整段记录。",
-          siftMetric: "服务商报告的提示词 token 比完整上下文少 59.66%",
+          siftBenchmark: "Sift 评测",
+          siftMetric: "相较完整上下文，服务商报告的提示词 token 降幅",
           siftEvidence: "在一组曾用于开发的 344 道公开 LongBench v2 题目中，按任务多数票计算的准确率也比完整上下文低 5.25 个百分点。",
           agentMemory: "智能体记忆",
           secondBrainDescription: "面向智能体记忆的本地优先知识图谱，数据保存在 Markdown 文件中。",
           moreProjects: "更多项目",
-          sourceRepositories: "源码仓库",
           localInferenceDescription: "一套经过测试的 Windows 工作流，可在配备 16 GB 显存的 RTX 5070 Ti 上运行量化 27B 模型，并附有测量记录与已知限制。",
           subrouteDescription: "为编程客户端、订阅适配器和 API 模型路由提供的本地端点。",
           shuntDescription: "用于编程任务档位推荐的研究原型；现有评审并不能证明它已适合投入生产。",
@@ -197,7 +189,6 @@
           aboutCopy: "我做 AI 基础设施和开发者工具，也会尝试做产品。",
           githubProfile: "GitHub 主页",
           startDiscussion: "发起讨论",
-          footerTagline: "项目、笔记与证据。",
           backToTop: "返回顶部"
         };
         const language = new URLSearchParams(window.location.search).get("lang") === "zh" ? "zh" : "en";
@@ -215,6 +206,10 @@
           document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
             const translation = zh[element.dataset.i18nAriaLabel];
             if (translation) element.setAttribute("aria-label", translation);
+          });
+          document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+            const translation = zh[element.dataset.i18nAlt];
+            if (translation) element.alt = translation;
           });
         }
         document.querySelectorAll("[data-lang-link]").forEach((link) => {

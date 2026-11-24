@@ -12,7 +12,7 @@ Project descriptions link to their repositories for implementation details, eval
 
 - Update `index.html` for copy, selected projects, and links.
 - Update `styles.css` for layout and visual style.
-- `assets/stan-cat-avatar.png` is the circular portrait used in the header and browser tab.
+- `assets/stan-cat-portrait.jpg` is the portrait in the introduction. `assets/stan-cat-favicon.png` is its browser icon.
 - Push to `main`; GitHub Pages serves the repository root at <https://stancsz.github.io/>.
 
 ## 简体中文
@@ -25,5 +25,5 @@ Stan Chen 的精简作品集与项目笔记。网站使用原生 HTML 和 CSS，
 
 - 修改 `index.html` 中的介绍、精选项目和链接。
 - 修改 `styles.css` 调整布局与视觉样式。
-- `assets/stan-cat-avatar.png` 是页眉和浏览器标签使用的圆形头像。
+- `assets/stan-cat-portrait.jpg` 是首屏头像，`assets/stan-cat-favicon.png` 是浏览器标签图标。
 - 推送到 `main` 后，由 GitHub Pages 从仓库根目录发布到 <https://stancsz.github.io/>。
